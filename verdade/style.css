@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f7b8c6;
+    background: linear-gradient(135deg, #f7b8c6, #c486ee);
+}
+
+header {
+    background-color: #4e0404;
+    color: white;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #f28482;
+    margin: 20px auto;
+    line-height: 1.5;
+    padding: 10px;
+    border: 2px solid #f28482;
+    border-radius: 5px;
+    background-color: #fff7f7;
+    max-width: 80%;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 60%;
+    margin: 20px auto;
+    height: 30%;
+    background-color: #9ce6da;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 60%;
+    flex: 0 0 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: auto;
+}
+
+.contador {
+    margin-top: 20px;
+    border-color: #4e0404;
+}
+
+input {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+footer {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #ec4545, #dbf547);
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+footer p{
+    margin-top: 25px;
+    color: black;
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Não interfere na interação com o site */
+    overflow: hidden;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2rem; /* Tamanho do emoji */
+    animation: fall 5s linear infinite; /* Animação de queda */
+}
+
+.player {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.track {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    width: 100%;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+      width: 90%;
+      height: auto;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
